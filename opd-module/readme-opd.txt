@@ -1,0 +1,1 @@
+OPD(Out Patient Department) Module implemented as part of the HIS(Health Information System) for the AF(Application Frameworks) Project
