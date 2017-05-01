@@ -1,0 +1,20 @@
+{
+  "name": "opd-module",
+  "description": "OPD Module implemented as part of the HIS for the AF Project",
+  "main": "server.js",
+  "authors": [
+    "GoF"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.6.4"
+  }
+}
