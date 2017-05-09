@@ -1,0 +1,151 @@
+<div>
+    <h1>
+        Patient Visit
+        <small>Preview</small>
+    </h1>
+
+    <div class="box box-primary">
+        <div class="box-header with-border">
+            <h3 class="box-title">Patient Visit Details</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form role="form">
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label for="exampleInputComplaintInjury">Complaints/Injury</label>
+                    <input type="text" class="form-control" id="exampleInputComplaintInjury" placeholder="Complaints/Injury">
+                </div>
+
+                <div class="form-group">
+                    <label>Visit type</label>
+                    <select class="form-control">
+                        <option>OPD</option>
+                        <option>Clinic</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputRemarks">Remarks</label>
+                    <input type="text" class="form-control" id="exampleInputRemarks" placeholder="Remarks">
+                </div>
+
+                <div class="form-group">
+                    <label>Date:</label>
+
+                    <div class="input-group date">
+                        <div class="input-group-addon">
+                            <i class="fa fa-calendar"></i>
+                        </div>
+                        <input type="text" class="form-control pull-right" id="datepicker">
+                    </div>
+                    <!-- /.input group -->
+                </div>
+
+                <div class="form-group">
+                    <label>Time picker:</label>
+
+                    <div class="input-group">
+                        <input type="text" class="form-control timepicker">
+
+                        <div class="input-group-addon">
+                            <i class="fa fa-clock-o"></i>
+                        </div>
+                    </div>
+                    <!-- /.input group -->
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputDoctor">Doctor</label>
+                    <input type="text" class="form-control" id="exampleInputDoctor" placeholder="Doctor">
+                </div>
+
+            </div>
+            <!-- /.box-body -->
+
+            <div class="box-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    <div class="box box-info">
+        <div class="box-header with-border">
+            <h3 class="box-title">Prescription</h3>
+        </div>
+        <!-- /.box-header -->
+        <!-- form start -->
+        <form class="form-horizontal">
+            <div class="box-body">
+
+                <div class="form-group">
+                    <label for="exampleInputPatientId">Patient ID</label>
+                    <input type="text" class="form-control" id="exampleInputPatientId" placeholder="Patient ID">
+                </div>
+
+                <div class="form-group">
+                    <label for="exampleInputPatientName">Patient Name</label>
+                    <input type="text" class="form-control" id="exampleInputPatientName" placeholder="Patient Name">
+                </div>
+                <div class="col-sm-12">
+                    <table id="example2" class="table table-bordered table-hover dataTable" role="grid"
+                           aria-describedby="example2_info">
+                        <thead>
+                        <tr role="row">
+                            <th class="sorting_desc" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                aria-label="Name of Medication: activate to sort column ascending"
+                                aria-sort="descending">Name of Medication
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                aria-label="Strength: activate to sort column ascending">Strength
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                aria-label="Frequency: activate to sort column ascending">Frequency
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                aria-label="Duration: activate to sort column ascending">Duration
+                            </th>
+                            <th class="sorting" tabindex="0" aria-controls="example2" rowspan="1" colspan="1"
+                                aria-label="Prescribed Physician: activate to sort column ascending">Prescribed
+                                Physician
+                            </th>
+                        </tr>
+                        </thead>
+
+                        <tbody>
+                        <tr role="row" class="odd">
+                            <td class="sorting_1">Webkit</td>
+                            <td>Safari 1.2</td>
+                            <td>OSX.3</td>
+                            <td>125.5</td>
+                            <td>A</td>
+                        </tr>
+                        <tr role="row" class="even">
+                            <td class="sorting_1">Webkit</td>
+                            <td>Safari 1.3</td>
+                            <td>OSX.3</td>
+                            <td>312.8</td>
+                            <td>A</td>
+                        </tr>
+
+                        </tbody>
+
+                    </table>
+                </div>
+
+
+
+            </div>
+            <!-- /.box-body -->
+            <div class="box-footer">
+                <button type="submit" class="btn btn-default">Cancel</button>
+                <button type="submit" class="btn btn-info pull-right">Send</button>
+            </div>
+            <!-- /.box-footer -->
+        </form>
+    </div>
+
+
+</div>
