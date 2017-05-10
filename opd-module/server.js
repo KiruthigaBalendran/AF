@@ -20,11 +20,20 @@ mongoose.connect(db.url, err => {
     console.log('Successfully connected to MongoDB');
 });
 
-app.use('/', express.static(__dirname + '/public'));
+app.use('/app', express.static(__dirname + '/public/'));
 app.use('/app/modules', express.static(__dirname + '/bower_components'));
+app.use('/app/assets', express.static(__dirname + '/assets'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('X-HTTP-Method-Override'));
+
+app.get('/', (req, res, next) => {
+    res.sendFile(__dirname + '/public/views/index.html');
+});
+
+app.get('/app/*', (req, res, next) => {
+    res.sendFile(__dirname + '/public/views/index.html');
+});
 
 app.listen(port, err => {
     if (err) {
