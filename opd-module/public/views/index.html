@@ -31,6 +31,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
     <![endif]-->
 </head>
 <!--
@@ -53,7 +54,7 @@ desired effect
 |               | sidebar-mini                            |
 |---------------------------------------------------------|
 -->
-<body class="hold-transition skin-green sidebar-mini">
+<body class="hold-transition skin-green sidebar-mini" ng-app="pvsApp">
 <div class="wrapper">
 
     <!-- Main Header -->
@@ -262,8 +263,26 @@ desired effect
                 <li class="header">MAIN NAVIGATION</li>
                 <!-- Optionally, you can add icons to the links -->
                 <li class="active"><a href="#"><i class="fa fa-dashboard"></i> <span>Dashboard</span></a></li>
-                <li><a href="#"><i class="fa fa-stethoscope"></i> <span>My OPD Patients</span></a></li>
+
+                <!--This is just for demo-->
+               <!-- <li><a href="#!prescription"><i class="fa fa-stethoscope"></i> <span>Prescription</span></a></li>-->
+
+                <li class="treeview">
+                    <a href="#"><i class="fa fa-th-list"></i> <span>My Patients</span>
+                        <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+                    </a>
+                    <ul class="treeview-menu">
+                        <li><a href="#!visitList"><i class="fa fa-circle-o"></i> Patients List</a></li>
+                        <li><a href="#!diagnose"><i class="fa fa-circle-o"></i> Patient Visit</a></li>
+                        <li><a href="#!prescription"><i class="fa fa-circle-o"></i> Prescription</a></li>
+                        <li><a href="#!laboratory"><i class="fa fa-circle-o"></i> Laboratory Request</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="#"><i class="fa fa-sort-amount-asc"></i> <span>My Queue</span></a></li>
+
                 <li class="treeview">
                     <a href="#"><i class="fa fa-th-list"></i> <span>Questionnaire</span>
                         <span class="pull-right-container">
@@ -295,7 +314,7 @@ desired effect
         <!-- Main content -->
         <section class="content">
             <!-- my code-->
-
+<ng-view></ng-view>
             <!-- Your Page Content Here -->
 
         </section>
@@ -393,13 +412,15 @@ desired effect
 <!-- ./wrapper -->
 
 <!-- REQUIRED JS SCRIPTS -->
-
+<script src="modules/angular/angular.js"></script>
+<script src="modules/angular-route/angular-route.js"></script>
 <!-- jQuery 2.2.3 -->
 <script src="assets/plugins/jQuery/jquery-2.2.3.min.js"></script>
 <!-- Bootstrap 3.3.6 -->
 <script src="assets/bootstrap/js/bootstrap.min.js"></script>
 <!-- AdminLTE App -->
 <script src="assets/dist/js/app.min.js"></script>
+<script src ="models/pvs-app.module.js"></script>
 
 <!-- Optionally, you can add Slimscroll and FastClick plugins.
      Both of these plugins are recommended to enhance the

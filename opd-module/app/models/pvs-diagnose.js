@@ -6,7 +6,6 @@ var diagnoseSchema = new Schema({
     visitType : {type:String, required:true},
     remarks : {type:String},
     visitDate : {type:Date},
-    visitTime : {type:Date},
     doctor : {type : String, required:true}
 });
 
