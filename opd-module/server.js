@@ -20,15 +20,17 @@ mongoose.connect(db.url, err => {
     console.log('Successfully connected to MongoDB');
 });
 
+//Setting the paths for public
 app.use('/app', express.static(__dirname + '/public/'));
 app.use('/app/modules', express.static(__dirname + '/bower_components'));
 app.use('/app/assets', express.static(__dirname + '/assets'));
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(methodOverride('X-HTTP-Method-Override'));
 
 app.get('/', (req, res, next) => {
-    res.sendFile(__dirname + '/public/views/index.html');
+    res.sendFile(__dirname + '/public/views/login.html');
 });
 
 app.get('/app/*', (req, res, next) => {
