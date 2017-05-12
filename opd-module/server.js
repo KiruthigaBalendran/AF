@@ -3,7 +3,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-const methodOverride = require('method-override');
+//const methodOverride = require('method-override');
+const router = express.Router();
+const routes = require('./app/routes/pr-patient.route')(router);
+const path = require('path');
 
 const app = express();
 
@@ -19,19 +22,20 @@ mongoose.connect(db.url, err => {
     }
     console.log('Successfully connected to MongoDB');
 });
-
-app.use('/app', express.static(__dirname + '/public/'));
-app.use('/app/modules', express.static(__dirname + '/bower_components'));
-app.use('/app/assets', express.static(__dirname + '/assets'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
-app.use(methodOverride('X-HTTP-Method-Override'));
+//app.use(methodOverride('X-HTTP-Method-Override'));
 
-app.get('/', (req, res, next) => {
-    res.sendFile(__dirname + '/public/views/index.html');
-});
+app.use('/api',routes);
+app.use('/app', express.static(__dirname + '/public/'));
+app.use('/bower_components', express.static(__dirname + '/bower_components'));
+app.use('/app/assets', express.static(__dirname + '/assets'));
 
-app.get('/app/*', (req, res, next) => {
+// app.get('/', (req, res, next) => {
+//     res.sendFile(__dirname + '/public/views/index.html');
+// });
+
+app.get('*', (req, res, next) => {
     res.sendFile(__dirname + '/public/views/index.html');
 });
 
