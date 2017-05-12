@@ -21,7 +21,10 @@ myOPDApp.config(['$routeProvider',function ($routeProvider) {
         .when('/ViewQuestionnaire',{
             templateUrl : '../views/PVW_ViewQuestionnaire.html'
         })
-
+        .when('/PatientMoreInfo',{
+            templateUrl : '../views/PVW_PatientMoreInfo.html'
+        })
 
 
 }]);
+

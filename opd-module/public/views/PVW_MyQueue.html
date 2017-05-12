@@ -10,11 +10,11 @@
     </section>
     <br>
 
-    <section class="content">
+    <section class="content" ng-app="OPDApp_2">
         <!-- Small boxes (Stat box) -->
         <div class="row">
             <div class="col-md-4 col-md-offset-3">
-                <div class="box box-solid" style="box-shadow:0px 0px 2px rgba(0, 0, 0, 0.2)">
+                <div class="box box-solid" style="box-shadow: 0px 0px 2px rgba(0,0,0,0.2);">
                     <div class="box-header with-border">
                         <i class="fa fa-bookmark"></i>
                         <h3 class="box-title">Summary View</h3>
@@ -25,23 +25,23 @@
                             <tr>
                                 <td>Name </td>
                                 <td> : </td>
-                                <td>Dr.  </td>
+                                <td>Dr. Wasantha </td>
                             </tr>
                             <tr>
                                 <td># of Patients </td>
                                 <td> : </td>
-                                <td>0 Patients</td>
+                                <td>1 Patients</td>
                             </tr>
                             <tr>
                                 <td>Queue Status </td>
                                 <td> : </td>
-                                <td>
+                                <td>On Hold
                                 </td>
                             </tr>
                             <tr>
                                 <td># of Treated Patients </td>
                                 <td> : </td>
-                                <td>0</td>
+                                <td>49</td>
                             </tr>
                             <tr>
                                 <td>Queue Type </td>
@@ -56,18 +56,18 @@
             </div><!-- ./col -->
 
 
-            <div class="col-md-3" style="margin-top:-10px">
+            <div class="col-md-3" style="margin-top: -10px;">
                 <div class="box-body">
-                    <div class="box box-solid" style="box-shadow:0px 0px 2px rgba(0, 0, 0, 0.2)">
+                    <div class="box box-solid" style="box-shadow: 0px 0px 2px rgba(0,0,0,0.2);">
                         <div class="box-header with-border">
                             <i class="fa fa-random"></i>
                             <h3 class="box-title">Queue Controller</h3>
                         </div><!-- /.box-header -->
-                        <div class="box-body" style="margin-top:6px">
+                        <div class="box-body" style="margin-top: 6px;">
                             <br>
-                            <input class="btn btn-block btn-primary" onclick="" value="Hold Queue">
+                            <input class="btn btn-block btn-primary" onclick="window.location='../../queue_c/holdQueue'" value="Resume Queue">
                             <br><br>
-                            <input type="button" onclick="" value="Redirect Queue" class="btn btn-block btn-danger">
+                            <input class="btn btn-block btn-danger" onclick="window.location='../../queue_c/redirectQueue'" type="button" value="Redirect Queue">
                             <br>
                         </div><!-- /.box-body -->
                     </div><!-- /.box -->
@@ -76,17 +76,6 @@
 
         </div>
         <div class="row">
-
-
-            <div class="callout callout-info">
-                <h4>Alert!</h4>
-                <p>There Are No Patients In The Queue</p>
-            </div>
-            <center>
-                <br><br>
-                <h4 style="color: #E13300"> &nbsp;&nbsp;&nbsp;There Are No Patients In The Queue  </h4>
-            </center>
-
 
 
         </div>
@@ -102,6 +91,25 @@
                 </div><!-- /.box-header -->
 
                 <br>
+                <div class="col-lg-3 col-xs-4" onclick="clickhere()">
+                    <!-- small box -->
+                    <div class="small-box bg-aqua">
+                        <div class="inner">
+                            <h5><b style="color: black;">Patient Name : Dr Iresh Perera</b></h5>
+                            <p>Patient ID : 12340000038</p>
+                            <p>Queue Number : 3</p>
+                        </div>
+                        <div class="icon">
+                            <i class="fa fa-male"></i>
+                        </div>
+                        <a class="small-box-footer" style="padding-top: 15px;" href="#!PatientMoreInfo">
+                            More info <i class="fa fa-arrow-circle-right"></i>
+                        </a>
+                    </div>
+                </div>
+
+
+
 
             </div>
         </div><!-- /.row -->
@@ -113,7 +121,7 @@
 
 
     <script src="http://his.sliit.lk/OPD/Bootstrap/js/barcdeReader"></script>
-
+    <script src="../models/PVW_opd.modules.js"></script>
 
 
 
