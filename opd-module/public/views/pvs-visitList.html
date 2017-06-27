@@ -1,4 +1,4 @@
-<div>
+<div ng-controller="OpdController" ng-init="getPatientVisit()">
     <div class="box box-primary">
         <div class="box-header with-border">
             <h3 class="box-title">OPD Patient List</h3>
@@ -59,22 +59,14 @@
                                         </tr>
                                         </thead>
                                         <tbody>
-                                        <tr role="row" class="odd">
+                                        <tr role="row" class="odd" ng-repeat="patient in patientDiagnosis">
                                             <td class="sorting_1">1</td>
                                             <td>HIN01</td>
                                             <td>Mr.Tom Milton</td>
-                                            <td>2017-02-07</td>
-                                            <td>Fever</td>
+                                            <td>{{patient.visitDate}}</td>
+                                            <td>{{patient.complaint}}</td>
                                             <td><a href="#!diagnose">view</a></td>
 
-                                        </tr>
-                                        <tr role="row" class="even">
-                                            <td class="sorting_1">2</td>
-                                            <td>HIN02</td>
-                                            <td>Ms.Preeti Singh</td>
-                                            <td>2017-02-07</td>
-                                            <td>Cold</td>
-                                            <td><a href="#!diagnose">view</a></td>
                                         </tr>
 
                                         </tbody>

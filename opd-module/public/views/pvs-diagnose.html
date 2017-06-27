@@ -62,22 +62,21 @@
 
                     <div class="form-group">
                         <label for="exampleInputComplaintInjury">Complaints/Injury</label>
-                        <input type="text" class="form-control" id="exampleInputComplaintInjury"
-                               placeholder="Complaints/Injury">
+                        <input type="text" class="form-control" id="exampleInputComplaintInjury" placeholder="Complaints/Injury" ng-model="patientDiagnosis.complaint">
                     </div>
 
                     <div class="form-group">
                         <label>Visit type</label>
                         <select class="form-control">
-                            <option>OPD</option>
-                            <option>Clinic</option>
-                            <option>Other</option>
+                            <ng-option>OPD</ng-option>
+                            <ng-option>Clinic</ng-option>
+                            <ng-option>Other</ng-option>
                         </select>
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputRemarks">Remarks</label>
-                        <input type="text" class="form-control" id="exampleInputRemarks" placeholder="Remarks">
+                        <input type="text" class="form-control" id="exampleInputRemarks" placeholder="Remarks" ng-model="patientDiagnosis.remarks">
                     </div>
 
                     <div class="form-group">
@@ -87,26 +86,22 @@
                             <div class="input-group-addon">
                                 <i class="fa fa-calendar"></i>
                             </div>
-                            <input type="text" class="form-control pull-right" id="datepicker">
+                            <input type="text" class="form-control pull-right" id="datepicker" ng-model="patientDiagnosis.visitDate"/>
                         </div>
                         <!-- /.input group -->
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputDoctor">Doctor</label>
-                        <input type="text" class="form-control" id="exampleInputDoctor" placeholder="Doctor">
+                        <input type="text" class="form-control" id="exampleInputDoctor" placeholder="Doctor" ng-model="patientDiagnosis.doctor"/>
                     </div>
 
                 </div>
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary" onclick="diagnose()">Submit</button>
-                    <script>
-                        function diagnose(){
-                            alert('Successfully saved the patient complaints!!!');
-                        }
-                    </script>
+                    <button type="submit" class="btn btn-primary" ng-click="diagnose(pvsDiagnosis)" >Submit</button>
+
                 </div>
             </form>
         </div>

@@ -11,6 +11,12 @@ const db = require('./config/db');
 const port = process.env.PORT || 3030;
 
 mongoose.Promise = global.Promise;
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));
+app.use(methodOverride('X-HTTP-Method-Override'));
+
+//mongodb
 mongoose.connect(db.url, err => {
     if (err) {
         console.log('Unable to connect to MongoDB');
@@ -23,9 +29,7 @@ mongoose.connect(db.url, err => {
 app.use('/app', express.static(__dirname + '/public/'));
 app.use('/app/modules', express.static(__dirname + '/bower_components'));
 app.use('/app/assets', express.static(__dirname + '/assets'));
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: true}));
-app.use(methodOverride('X-HTTP-Method-Override'));
+
 
 app.get('/', (req, res, next) => {
     res.sendFile(__dirname + '/public/views/index.html');
@@ -35,6 +39,15 @@ app.get('/app/*', (req, res, next) => {
     res.sendFile(__dirname + '/public/views/index.html');
 });
 
+//schema
+require('./app/models/pvs-diagnose');
+
+//route
+const pvsDiagnoseRoute  = require('./app/routes/pvs-diagnose.route.js');
+
+app.use('/patientDiagnosis', pvsDiagnoseRoute);
+
+//server
 app.listen(port, err => {
     if (err) {
         console.log('Error listening to port ' + port);
