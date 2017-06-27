@@ -67,10 +67,11 @@
 
                     <div class="form-group">
                         <label>Visit type</label>
-                        <select class="form-control">
-                            <ng-option>OPD</ng-option>
-                            <ng-option>Clinic</ng-option>
-                            <ng-option>Other</ng-option>
+                        <select class="form-control" ng-model="patientDiagnosis.visitType" ng-options="type in visit">
+
+                           <!-- <ng-options>Clinic</ng-options>
+                            <option>Other</option>-->
+                            <option value="">Select Visit Type</option>
                         </select>
                     </div>
 
@@ -100,7 +101,7 @@
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary" ng-click="diagnose(pvsDiagnosis)" >Submit</button>
+                    <button type="submit" class="btn btn-primary" ng-click="addPatientVisit(patientDiagnosis)" >Submit</button>
 
                 </div>
             </form>

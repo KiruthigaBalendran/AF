@@ -12,7 +12,7 @@ var diagnoseSchema = new Schema({
     visitType :
         {
             type:String,
-            required:true
+            required:false
         },
     remarks :
         {

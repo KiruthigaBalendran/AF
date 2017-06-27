@@ -41,11 +41,14 @@ app.get('/app/*', (req, res, next) => {
 
 //schema
 require('./app/models/pvs-diagnose');
+require('./app/models/pvs-patient');
 
 //route
 const pvsDiagnoseRoute  = require('./app/routes/pvs-diagnose.route.js');
+const pvsPat  = require('./app/routes/pvs-pat-route');
 
 app.use('/patientDiagnosis', pvsDiagnoseRoute);
+app.use('/patient', pvsPat);
 
 //server
 app.listen(port, err => {
