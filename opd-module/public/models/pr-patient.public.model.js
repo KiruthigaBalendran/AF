@@ -1,4 +1,4 @@
-angular.module('userapp',['approutes','patientController','patientService']);
+angular.module('userapp',['approutes','patientController','patientService','viewPatientController','viewPatientService']);
 
 
 

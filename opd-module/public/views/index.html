@@ -40,8 +40,10 @@ scratch. This page gets rid of all links and provides the needed markup only.
 
     <!--angular controllers-->
     <script src="/app/controllers/pr-patientController.js"></script>
+    <script src="/app/controllers/pr-viewPatientController.js"></script>
     <!--angular services-->
     <script src="/app/services/pr-patientServices.js"></script>
+    <script src="/app/services/pr-viewPatientService.js"></script>
 
      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -50,6 +52,23 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!--[if lt IE 9]>
    
     <![endif]-->
+        <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
 </head>
 <!--
 BODY TAG OPTIONS:

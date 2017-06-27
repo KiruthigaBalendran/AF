@@ -1,0 +1,14 @@
+<table>
+    <tr>
+        <th>NIC</th>
+        <th>Full Name</th>
+        <th>Gender</th>
+        <th>Date Of Birth</th>
+    </tr>
+    <tr ng-repeat="patient in patients track by $index">
+        <td>{{patient.nic}}</td>
+        <td>{{patient.title}}</td>
+        <td>{{patient.gender}}</td>
+        <td>{{patient.dateOfBirth}}</td>
+    </tr>
+</table>

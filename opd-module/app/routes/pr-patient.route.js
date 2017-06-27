@@ -35,6 +35,17 @@ module.exports = function (router) {
 
 
 });
+
+
+
+    router.get('/patients', function(req, res) {
+    registration.find().exec().then(patients => {
+        res.json(patients);
+    }).catch(err => {
+        console.error(err);
+        res.sendStatus(500);
+    });
+});
 return router;
 }
 

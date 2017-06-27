@@ -5,7 +5,12 @@ angular.module('approutes',['ngRoute'])
             templateUrl: '/app/views/pr-patientRegistration.html',
             controller: 'registrationController',
             controllerAs : 'register'
-        });
+        })
+        .when('/viewPatients',{
+            templateUrl: '/app/views/pr-viewPatients.html',
+            controller: 'viewPatientCtrl'
+        })
+
 
         //to remove the # from the url
         $locationProvider.html5Mode({
