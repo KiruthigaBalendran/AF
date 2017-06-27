@@ -6,6 +6,8 @@ var patientSchema = new Schema({
     firstName: { type:String, required: true},
     lastName: { type:String, required: true},
     nic:{type:String,required: true, unique: true},
+    address:{type:String,required:true},
+    telephoneNo:{type:String,required:true},
     dateOfBirth : {type:Date},
     gender:{type:String},
     disease : {type:String}

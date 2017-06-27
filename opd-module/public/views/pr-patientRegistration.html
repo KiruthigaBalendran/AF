@@ -1,13 +1,13 @@
 <div class="page-header">
-    <h1>Patient Registration</h1>
+    <h2>Patient Registration</h2>
 </div>
 
 <form ng-submit="register.regPatient(regData);">
     <label> Title</label>&nbsp;&nbsp;
-    <input type="radio" name="title" ng-model="register.regData.title" value="mr" autocomplete="off" checked> Mr &nbsp;&nbsp;
-    <input type="radio" name="title" ng-model="register.regData.title" value="mrs" autocomplete="off"> Mrs &nbsp;&nbsp;
-    <input type="radio" name="title" ng-model="register.regData.title" value="ms" autocomplete="off"> Ms &nbsp;&nbsp;
-    <input type="radio" name="title" ng-model="register.regData.title" value="rev" autocomplete="off"> Rev &nbsp;&nbsp;
+    <input type="radio" name="title" ng-model="register.regData.title" value="Mr" autocomplete="off" checked> Mr &nbsp;&nbsp;
+    <input type="radio" name="title" ng-model="register.regData.title" value="Mrs" autocomplete="off"> Mrs &nbsp;&nbsp;
+    <input type="radio" name="title" ng-model="register.regData.title" value="Ms" autocomplete="off"> Ms &nbsp;&nbsp;
+    <input type="radio" name="title" ng-model="register.regData.title" value="Rev" autocomplete="off"> Rev &nbsp;&nbsp;
     <br>
     <br>
 
@@ -30,7 +30,14 @@
     <label>Gender</label>&nbsp;&nbsp;
             <input type="radio" name="gender" ng-model="register.regData.gender" value="male" autocomplete="off" checked> Male &nbsp;&nbsp;
             <input type="radio" name="gender" ng-model="register.regData.gender" value="female"  autocomplete="off"> Female
-    <br/>
+    <br>
+
+    <label> Address</label>
+    <input class="form-control" type="text" name="address" placeholder="Enter Address" ng-model="register.regData.address">
+    <br>
+
+    <label> Telephone No.</label>
+    <input class="form-control" type="text" name="telephoneNo" placeholder="Enter Telephone No" ng-model="register.regData.telephoneNo">
     <br>
 
     <label> Allergies</label>
