@@ -67,11 +67,11 @@
 
                     <div class="form-group">
                         <label>Visit type</label>
-                        <select class="form-control" ng-model="patientDiagnosis.visitType" ng-options="type in visit">
-
-                           <!-- <ng-options>Clinic</ng-options>
-                            <option>Other</option>-->
-                            <option value="">Select Visit Type</option>
+                        <select class="form-control" ng-model="patientDiagnosis.visitType">
+                            <option value="select">Select Visit Type</option>
+                            <option value="opd">OPD</option>
+                            <option value="clinic">Clinic</option>
+                            <option value="other">Other</option>
                         </select>
                     </div>
 
@@ -100,10 +100,7 @@
                 </div>
                 <!-- /.box-body -->
 
-                <div class="box-footer">
-                    <button type="submit" class="btn btn-primary" ng-click="addPatientVisit(patientDiagnosis)" >Submit</button>
 
-                </div>
             </form>
         </div>
 
@@ -125,33 +122,34 @@
 
                     <div class="form-group">
                         <label for="exampleInputWeigth">Weigth (Kg)</label>
-                        <input type="text" class="form-control" id="exampleInputWeigth" placeholder="Weigth">
+                        <input type="text" class="form-control" id="exampleInputWeigth" placeholder="Weigth" ng-model="patientDiagnosis.weight">
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputHeight">Height (cm)</label>
-                        <input type="text" class="form-control" id="exampleInputHeight" placeholder="Heigth">
+                        <input type="text" class="form-control" id="exampleInputHeight" placeholder="Heigth" ng-model="patientDiagnosis.heigth">
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputSysBp">SysBp</label>
-                        <input type="text" class="form-control" id="exampleInputSysBp" placeholder="SysBp">
+                        <input type="text" class="form-control" id="exampleInputSysBp" placeholder="SysBp" ng-model="patientDiagnosis.sysbp">
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputDiastBp">DiastBp</label>
-                        <input type="text" class="form-control" id="exampleInputDiastBp" placeholder="DiastBp">
+                        <input type="text" class="form-control" id="exampleInputDiastBp" placeholder="DiastBp" ng-model="patientDiagnosis.diastbp">
                     </div>
 
                     <div class="form-group">
                         <label for="exampleInputTemperature">Temperature(℉)</label>
-                        <input type="text" class="form-control" id="exampleInputTemperature" placeholder="Temperature">
+                        <input type="text" class="form-control" id="exampleInputTemperature" placeholder="Temperature" ng-model="patientDiagnosis.temperature">
                     </div>
                 </div>
                 <!-- /.box-body -->
 
                 <div class="box-footer">
-                    <button type="submit" class="btn btn-primary">Submit</button>
+                    <button type="submit" class="btn btn-primary" ng-click="addPatientVisit(patientDiagnosis)" >Submit</button>
+
                 </div>
             </form>
         </div>

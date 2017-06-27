@@ -26,6 +26,26 @@ var diagnoseSchema = new Schema({
         {
             type : String,
             required:true
+        },
+    weight :
+        {
+            type:Number
+        },
+    height :
+        {
+            type:Number
+        },
+    sysbp :
+        {
+            type:Number
+        },
+    diastbp :
+        {
+            type:Number
+        },
+    temperature :
+        {
+            type:Number
         }
 });
 
