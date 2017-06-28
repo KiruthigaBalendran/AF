@@ -7,22 +7,22 @@ myOPDApp.config(['$routeProvider',function ($routeProvider) {
     $routeProvider
 
         .when('/',{
-            templateUrl : '../views/PVW_dashboard.html'
+            templateUrl : 'views/PVW_dashboard.html'
         })
         .when('/MyOPDPatients',{
-            templateUrl : '../views/PVW_MyOPDPatients.html'
+            templateUrl : 'views/PVW_MyOPDPatients.html'
         })
         .when('/MyQueue',{
-            templateUrl : '../views/PVW_MyQueue.html'
-        })
-        .when('/AddQuestionnaire',{
-            templateUrl : '../views/PVW_AddQuestionnaire.html'
-        })
-        .when('/ViewQuestionnaire',{
-            templateUrl : '../views/PVW_ViewQuestionnaire.html'
+            templateUrl : 'views/PVW_MyQueue.html'
         })
         .when('/PatientMoreInfo',{
-            templateUrl : '../views/PVW_PatientMoreInfo.html'
+            templateUrl : 'views/PVW_PatientMoreInfo.html'
+        })
+        .when('/AddToQueue',{
+            templateUrl : 'views/PVW_AddToQueue.html'
+        })
+        .when('/token',{
+            templateUrl : 'views/PVW_TokenView.html'
         })
 
 
