@@ -8,6 +8,7 @@ const methodOverride = require('method-override');
 const app = express();
 
 const db = require('./config/db');
+
 const port = process.env.PORT || 3030;
 
 mongoose.Promise = global.Promise;
